@@ -1,0 +1,42 @@
+/* assets/css/style.css - Theme B: colorful, gradients, big buttons, animations */
+:root{
+  --blue:#0b62d6;
+  --dark:#0b1b2e;
+  --yellow:#f7c948;
+  --white:#ffffff;
+  --card:#fff7ea;
+  --muted:#6b7280;
+  --glass: rgba(255,255,255,0.06);
+}
+
+*{box-sizing:border-box;margin:0;padding:0;font-family:Inter,Segoe UI,Roboto,Arial,sans-serif}
+body{background:linear-gradient(180deg,#f0f6ff 0%, #ffffff 40%);color:var(--dark);min-height:100vh;display:flex;flex-direction:column}
+.topbar{display:flex;justify-content:space-between;align-items:center;padding:14px 22px;background:linear-gradient(90deg,#072b8a,#0b62d6);color:var(--white);box-shadow:0 6px 18px rgba(11,38,99,0.12)}
+.topbar .brand{font-weight:800;font-size:20px;letter-spacing:0.4px}
+.topnav a{color:var(--white);text-decoration:none;margin-left:14px;padding:8px 12px;border-radius:8px;font-weight:600}
+.topnav .cta{background:var(--yellow);color:var(--dark);padding:8px 14px;border-radius:10px;margin-left:10px}
+
+.hero{padding:48px 20px 20px;max-width:1200px;margin:0 auto;width:100%}
+.hero-inner{text-align:center;padding:28px;background:linear-gradient(180deg, rgba(11,98,214,0.08), rgba(247,201,72,0.03));border-radius:12px;box-shadow:0 10px 30px rgba(13,26,60,0.06)}
+.hero h1{font-size:28px;color:var(--dark);margin-bottom:8px}
+.hero p{color:var(--muted);margin-bottom:16px}
+.hero-actions{display:flex;gap:12px;justify-content:center;margin-top:8px}
+.btn{display:inline-block;padding:10px 16px;border-radius:10px;text-decoration:none;font-weight:700}
+.btn-primary{background:linear-gradient(90deg,var(--blue),#0d8bf0);color:var(--white)}
+.btn-outline{border:2px solid rgba(11,98,214,0.12);color:var(--blue);background:transparent;border-radius:10px;padding:8px 14px}
+.btn-yellow{background:linear-gradient(90deg,var(--yellow),#ffd86b);color:var(--dark)}
+
+/* exam cards */
+.exam-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin-top:22px}
+.exam-card{background:linear-gradient(180deg,var(--card),#ffffff);padding:18px;border-radius:12px;box-shadow:0 8px 28px rgba(11,38,99,0.06);min-height:140px;display:flex;flex-direction:column;justify-content:space-between;transition:transform .22s ease}
+.exam-card:hover{transform:translateY(-6px)}
+
+/* footer */
+.site-footer{text-align:center;padding:18px 12px;color:var(--muted);font-size:13px;margin-top:auto}
+
+/* responsive */
+@media (max-width:700px){
+  .hero h1{font-size:20px}
+  .topnav a{padding:6px 8px}
+  .exam-grid{grid-template-columns:repeat(2,1fr)}
+}
